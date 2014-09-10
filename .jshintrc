@@ -3,7 +3,8 @@
     "document": true,
     "window": true,
     "-Promise": true,
-    "EgCodeHighlightENV": true
+    "EgCodeHighlightENV": true,
+    "hljs": true
   },
   "browser" : true,
   "boss" : true,

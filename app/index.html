@@ -10,15 +10,15 @@
     {{BASE_TAG}}
 
     <link rel="stylesheet" href="assets/vendor.css">
-    <link rel="stylesheet" href="assets/eg-code-highlight.css">
+    <link rel="stylesheet" href="assets/ember-cli-eg-code-highlight.css">
   </head>
   <body>
     <script src="assets/vendor.js"></script>
-    <script src="assets/eg-code-highlight.js"></script>
+    <script src="assets/ember-cli-eg-code-highlight.js"></script>
     <script>
-      window.EgCodeHighlightENV = require('eg-code-highlight/config/environment')['default'];
+      window.EgCodeHighlightENV = require('ember-cli-eg-code-highlight/config/environment')['default'];
       window.EmberENV = window.EgCodeHighlightENV.EmberENV;
-      window.EgCodeHighlight = require('eg-code-highlight/app')['default'].create(EgCodeHighlightENV.APP);
+      window.EgCodeHighlight = require('ember-cli-eg-code-highlight/app')['default'].create(EgCodeHighlightENV.APP);
     </script>
   </body>
 </html>
