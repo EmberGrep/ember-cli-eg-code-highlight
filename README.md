@@ -1,4 +1,4 @@
-#h1 eg-code-highlight</h1>
+#eg-code-highlight
 
 A quick and easy to use code highlighting component for Ember using <a href="https://highlightjs.org/">highlight.js</a>
 
