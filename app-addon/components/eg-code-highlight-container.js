@@ -1,5 +1,5 @@
 import CodeHighlight from './eg-code-highlight';
 
-export default Ember.Component.extend({
-	templateName: 'components/eg-code-highlight-container'
+export default CodeHighlight.extend({
+	layoutName: 'components/eg-code-highlight-container'
 });
