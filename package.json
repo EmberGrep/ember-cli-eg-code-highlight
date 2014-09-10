@@ -4,7 +4,9 @@
   "keywords": [
     "ember-addon"
   ],
-  "ember-addon-main": "lib/ember-addon-main.js",
+  "ember-addon": {
+    "main": "lib/ember-addon-main.js"
+  },
   "private": false,
   "directories": {
     "doc": "doc",
