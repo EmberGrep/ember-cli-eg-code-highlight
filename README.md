@@ -1,51 +1,26 @@
-# Eg-code-highlight
+#h1 eg-code-highlight</h1>
 
-This README outlines the details of collaborating on this Ember application.
+A quick and easy to use code highlighting component for Ember using <a href="https://highlightjs.org/">highlight.js</a>
 
-A short introduction of this app could easily go here.
+##Installation
 
-## Prerequisites
+To install `eg-code-highlight` simply run `npm install ember-cli-eg-code-highlight --save-dev`.
 
-You will need the following things properly installed on your computer.
+##Use
 
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM) and [Bower](http://bower.io/)
+Using `eg-code-highlight` is incredibly easy!
+The `eg-code-highlight` component takes too arguments: `code` and `language`.
+To create this, in your template you can do this.
 
-## Installation
+    {{eg-code-highlight code=codeHighlightExample language='hbs'}}
 
-* `git clone <repository-url>` this repository
-* change into the new directory
-* `npm install`
-* `bower install`
+This works for multiple languages, the controller for this example is:
 
-## Running / Development
+    import Ember from 'ember';
+    import codeHighlightExample from 'ember-cli-eg-code-highlight/text/code-highlight-example';
+    import controllerCode from 'ember-cli-eg-code-highlight/text/controller-code';
 
-* `ember server`
-* Visit your app at http://localhost:4200.
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* ember: http://emberjs.com/
-* ember-cli: http://www.ember-cli.com/
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
+    export default Ember.Controller.extend({
+      codeHighlightExample: codeHighlightExample,
+      controllerCode: controllerCode
+    });
