@@ -1,6 +1,7 @@
 {
   "name": "ember-cli-eg-code-highlight",
   "version": "0.1.2",
+  "description": "A quick and easy to use code highlighting component for Ember using highlight.js",
   "keywords": [
     "ember-addon"
   ],
@@ -17,7 +18,7 @@
     "build": "ember build",
     "test": "ember test"
   },
-  "repository": "https://github.com/stefanpenner/ember-cli",
+  "repository": "https://github.com/EmberGrep/ember-cli-eg-code-highlight",
   "engines": {
     "node": ">= 0.10.0"
   },
