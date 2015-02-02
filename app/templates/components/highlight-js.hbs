@@ -1,0 +1,10 @@
+{{#if hasLineNumbers}}
+  <ul class='ember-highlight-line-numbers'>
+    {{#each number in lineNumbers}}
+      <li>{{unbound number}}</li>
+    {{/each}}
+  </ul>
+{{/if}}
+<pre>
+  {{{highlight}}}
+</pre>
