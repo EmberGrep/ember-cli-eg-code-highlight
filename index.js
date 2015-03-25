@@ -1,8 +1,6 @@
 /* jshint node: true */
 'use strict';
 var path = require('path');
-var find = require('broccoli-stew').find;
-var log = require('broccoli-stew').log;
 
 module.exports = {
   name: 'ember-highlight-js',
