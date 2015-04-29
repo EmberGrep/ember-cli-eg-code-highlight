@@ -29,10 +29,10 @@ test('it renders and toggles language', function(assert) {
 
   assert.ok(component.$().is('.javascript'), 'expect class `.javascript` is present');
 
-  Ember.run(component, 'set', 'lang', 'erlang');
+  Ember.run(component, 'set', 'lang', 'bash');
 
   assert.ok(!component.$().is('.javascript'), 'did NOT expect class `.javascript` is present');
-  assert.ok(!component.$().is('.erlange'), 'expect class `.erlang` is present');
+  assert.ok(component.$().is('.bash'), 'expect class `.bash` is present');
 });
 
 test('it renders and toggles lineNumbers', function(assert) {

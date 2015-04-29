@@ -2,7 +2,7 @@ import Ember from 'ember';
 import {
   highlight,
   highlightAuto
-} from 'highlight.js';
+} from 'highlightjs';
 
 function range(start, count) {
   return Array.apply(0, new Array(count))
@@ -18,9 +18,9 @@ export default Ember.Component.extend({
     var code = this.get('code');
 
     if (code) {
-      return range(1, code.split('\n').length + 1);
+      return Ember.A(range(1, code.split('\n').length + 1));
     } else {
-      return [];
+      return Ember.A();
     }
   }).readOnly(),
 
