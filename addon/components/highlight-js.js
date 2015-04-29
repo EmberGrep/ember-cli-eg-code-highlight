@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import layout from '../templates/highlight-js';
 import {
   highlight,
   highlightAuto
@@ -12,6 +13,8 @@ function range(start, count) {
 }
 
 export default Ember.Component.extend({
+  layout: layout,
+
   classNameBindings: ['lang'],
   hasLineNumbers: true,
   lineNumbers: Ember.computed('code', function() {
