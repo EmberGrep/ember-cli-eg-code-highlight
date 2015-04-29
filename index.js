@@ -1,6 +1,5 @@
 /* jshint node: true */
 'use strict';
-var path = require('path');
 
 module.exports = {
   name: 'ember-highlight-js',
@@ -14,22 +13,18 @@ module.exports = {
     var style = config.style;
 
     if (style) {
-      app.import('vendor/highlight.js/styles/' + style + '.css');
+      app.import(app.bowerDirectory + '/highlightjs/styles/' + style + '.css');
     }
 
-    app.import('vendor/highlight.js/index.js', {
+    app.import(app.bowerDirectory + '/highlightjs/highlight.pack.js');
+    app.import('vendor/highlight-js-shim.js', {
       exports: {
-        'highlight.js': [
+        'highlightjs': [
           'default',
           'highlight',
-          'highlightAuto',
-          'highlightBlock'
+          'highlightAuto'
         ]
       }
     });
-
-    if (style) {
-      app.import('vendor/highlight.js/styles/' + style + '.css')
-    }
   }
 };

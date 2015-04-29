@@ -10,8 +10,8 @@ moduleForComponent('highlight-js', 'HighlightJsComponent', {
   // needs: ['component:foo', 'helper:bar']
 });
 
-test('it renders and toggles language', function() {
-  expect(6);
+test('it renders and toggles language', function(assert) {
+  assert.expect(6);
 
   // creates the component instance
   var component = this.subject({
@@ -19,24 +19,24 @@ test('it renders and toggles language', function() {
     code: 'import foo from "bar"'
   });
 
-  equal(component._state, 'preRender');
+  assert.equal(component._state, 'preRender');
 
   // appends the component to the page
   this.append();
 
-  equal(component._state, 'inDOM');
-  equal(component.$('.hljs-string').text(), '"bar"');
+  assert.equal(component._state, 'inDOM');
+  assert.equal(component.$('.hljs-string').text(), '"bar"');
 
-  ok(component.$().is('.javascript'), 'expect class `.javascript` is present');
+  assert.ok(component.$().is('.javascript'), 'expect class `.javascript` is present');
 
-  Ember.run(component, 'set', 'lang', 'erlang');
+  Ember.run(component, 'set', 'lang', 'bash');
 
-  ok(!component.$().is('.javascript'), 'did NOT expect class `.javascript` is present');
-  ok(!component.$().is('.erlange'), 'expect class `.erlang` is present');
+  assert.ok(!component.$().is('.javascript'), 'did NOT expect class `.javascript` is present');
+  assert.ok(component.$().is('.bash'), 'expect class `.bash` is present');
 });
 
-test('it renders and toggles lineNumbers', function() {
-  expect(6);
+test('it renders and toggles lineNumbers', function(assert) {
+  assert.expect(6);
 
   // creates the component instance
   var component = this.subject({
@@ -45,19 +45,19 @@ test('it renders and toggles lineNumbers', function() {
     hasLineNumbers: true
   });
 
-  equal(component._state, 'preRender');
+  assert.equal(component._state, 'preRender');
 
   // appends the component to the page
   this.append();
 
-  equal(component._state, 'inDOM');
+  assert.equal(component._state, 'inDOM');
 
 
-  equal(component.$('.ember-highlight-line-numbers li').text(), '12');
+  assert.equal(component.$('.ember-highlight-line-numbers li').text(), '12');
   Ember.run(component, 'set', 'hasLineNumbers', false);
-  equal(component.$('.ember-highlight-line-numbers li').length, 0);
+  assert.equal(component.$('.ember-highlight-line-numbers li').length, 0);
   Ember.run(component, 'set', 'hasLineNumbers', true);
-  equal(component.$('.ember-highlight-line-numbers li').text(), '12');
+  assert.equal(component.$('.ember-highlight-line-numbers li').text(), '12');
   Ember.run(component, 'set', 'code', 'a\nb\n');
-  equal(component.$('.ember-highlight-line-numbers li').text(), '1234');
+  assert.equal(component.$('.ember-highlight-line-numbers li').text(), '1234');
 });
