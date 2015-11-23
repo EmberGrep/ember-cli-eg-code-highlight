@@ -1,6 +1,6 @@
 {{#if hasLineNumbers}}
   <ul class='ember-highlight-line-numbers'>
-    {{#each number in lineNumbers}}
+    {{#each lineNumbers as |number|}}
       <li>{{unbound number}}</li>
     {{/each}}
   </ul>
