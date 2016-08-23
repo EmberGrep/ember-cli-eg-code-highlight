@@ -23,7 +23,9 @@ module.exports = {
           'default',
           'highlight',
           'highlightAuto',
-          'highlightBlock'
+          'highlightBlock',
+          'initHighlighting',
+          'initHighlightingOnLoad'
         ]
       }
     });
