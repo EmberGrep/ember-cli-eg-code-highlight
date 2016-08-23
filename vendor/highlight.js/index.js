@@ -9856,7 +9856,9 @@ define('highlight.js', [], function(){
     default: highlight,
     highlight: highlight.highlight,
     highlightAuto: highlight.highlightAuto,
-    highlightBlock: highlight.highlightBlock
+    highlightBlock: highlight.highlightBlock,
+    initHighlighting: highlight.initHighlighting,
+    initHighlightingOnLoad: highlight.initHighlightingOnLoad,
   };
 });
 
