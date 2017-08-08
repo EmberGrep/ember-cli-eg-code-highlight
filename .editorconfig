@@ -20,6 +20,7 @@ indent_size = 2
 [*.hbs]
 indent_style = space
 indent_size = 2
+insert_final_newline = false
 
 [*.css]
 indent_style = space
@@ -30,4 +31,5 @@ indent_style = space
 indent_size = 2
 
 [*.md]
+[*.{diff,md}]
 trim_trailing_whitespace = false

@@ -27,9 +27,5 @@ module.exports = {
         ]
       }
     });
-
-    if (style) {
-      app.import('vendor/highlight.js/styles/' + style + '.css')
-    }
   }
 };

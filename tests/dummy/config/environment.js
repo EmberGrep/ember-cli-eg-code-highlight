@@ -1,22 +1,28 @@
-/* jshint node: true */
-var fs = require('fs');
+/* eslint-env node */
+'use strict';
+
+let fs = require('fs');
 
 module.exports = function(environment) {
-  var ENV = {
+  let ENV = {
     modulePrefix: 'dummy',
+    environment,
+    rootURL: '/',
+    locationType: 'auto',
     emberHighlightJs: {
       style: 'arta'
     },
-    environment: environment,
     languages: fs.readdirSync('node_modules/highlight.js/lib/languages').map(function(language) {
       return language.replace(/\.js$/, '');
     }),
-    baseURL: '/',
-    locationType: 'auto',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
+      },
+      EXTEND_PROTOTYPES: {
+        // Prevent Ember Data from overriding Date.parse.
+        Date: false
       }
     },
 
@@ -36,7 +42,6 @@ module.exports = function(environment) {
 
   if (environment === 'test') {
     // Testem prefers this...
-    ENV.baseURL = '/';
     ENV.locationType = 'none';
 
     // keep test console output quieter
