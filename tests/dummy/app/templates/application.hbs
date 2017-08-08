@@ -1,8 +1,13 @@
 <!-- Begin page content -->
 <div class="container">
   <h2 id="title">ember-highlight-js demo</h2>
-
-  <label>Language: {{view 'select' content=languages value=language}}</label>
+  <label>
+    Language: {{#x-select value=language action=(action "setLanguage") as |xs|}}
+                {{#each languages as |l|}}
+                  {{#xs.option value=l}}{{l}}{{/xs.option}}
+                {{/each}}
+              {{/x-select}}
+  </label>
   <label>hasLineNumbers: {{input type="checkbox" checked=hasLineNumbers}}</label>
   {{highlight-js code=file lang=language hasLineNumbers=hasLineNumbers}}
 
